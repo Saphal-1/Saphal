@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saphal Thapaliya | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-brand">Saphal.</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="review.html">Reviews</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="icon-btn"><i class="fas fa-moon"></i></button>
+            <div id="auth-section">
+                <button id="login-btn" class="btn primary-btn glass-btn">
+                    <i class="fab fa-google"></i> Login
+                </button>
+                <div id="user-profile" class="hidden">
+                    <img id="user-pic" src="" alt="Profile">
+                    <div class="user-info">
+                        <span id="user-name"></span>
+                        <span id="user-email"></span>
+                    </div>
+                    <button id="logout-btn" class="icon-btn"><i class="fas fa-sign-out-alt"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="about-section">
+            <div class="glass-card profile-card" id="tilt-card">
+                <div class="profile-header">
+                    <div class="profile-image-container">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Saphal" alt="Saphal Thapaliya" class="profile-image">
+                        <div class="status-badge"></div>
+                    </div>
+                    <h1 class="gradient-text">Saphal Thapaliya</h1>
+                    <p class="subtitle">Full-Stack Web Developer & Student</p>
+                </div>
+                
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h4>Grade</h4>
+                            <p>10</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-school"></i>
+                        <div>
+                            <h4>School</h4>
+                            <p>Adarsha Secondary School</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Nepal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Firebase Modular SDK -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

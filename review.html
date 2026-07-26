@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | Saphal Thapaliya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="review.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation (Identical) -->
+    <nav class="glass-nav">
+        <div class="nav-brand">Saphal.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="review.html" class="active">Reviews</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="icon-btn"><i class="fas fa-moon"></i></button>
+            <div id="auth-section">
+                <button id="login-btn" class="btn primary-btn glass-btn">
+                    <i class="fab fa-google"></i> Login
+                </button>
+                <div id="user-profile" class="hidden">
+                    <img id="user-pic" src="" alt="Profile">
+                    <div class="user-info">
+                        <span id="user-name"></span>
+                        <span id="user-email"></span>
+                    </div>
+                    <button id="logout-btn" class="icon-btn"><i class="fas fa-sign-out-alt"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="review-container">
+        <!-- Review Submission Form -->
+        <section class="glass-card review-form-card">
+            <h2 class="gradient-text">Leave a Review</h2>
+            <form id="review-form">
+                <div class="input-group">
+                    <input type="text" id="reviewer-name" placeholder="Your Name" required>
+                </div>
+                
+                <div class="rating-selector">
+                    <span>Rating: </span>
+                    <div class="stars" id="star-selector">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <input type="hidden" id="review-rating" value="5">
+                </div>
+
+                <div class="input-group">
+                    <textarea id="review-comment" rows="4" placeholder="Share your experience..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn primary-btn submit-btn">Submit Review</button>
+            </form>
+        </section>
+
+        <!-- Reviews Display -->
+        <section class="reviews-list-section">
+            <div class="overall-rating glass-card">
+                <h3>Overall Rating</h3>
+                <div class="display-stars">
+                    <i class="fas fa-star active"></i>
+                    <i class="fas fa-star active"></i>
+                    <i class="fas fa-star active"></i>
+                    <i class="fas fa-star active"></i>
+                    <i class="fas fa-star-half-alt active"></i>
+                </div>
+                <span id="average-score">4.8 / 5.0</span>
+            </div>
+
+            <div id="reviews-grid" class="reviews-grid">
+                <!-- Reviews will be injected here via JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Base Scripts (Auth & Theme) -->
+    <script type="module" src="script.js"></script>
+    <!-- Review Scripts (Firestore) -->
+    <script type="module" src="review.js"></script>
+</body>
+</html>
